@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-const NavBar = ({ menuItems = [{ route: "/", label: "Home" }], brand = "ITxPRO" }) => {
+const NavBar = ({ menuItems = [{ route: "/", label: "Home" }], brand = "itPR0" }) => {
 
     const [toggle, setToggle] = useState(false)
     const [matches, setMatches] = useState(
@@ -25,7 +25,7 @@ const NavBar = ({ menuItems = [{ route: "/", label: "Home" }], brand = "ITxPRO" 
     const desktopMenu = (
         <ul className="flex last:pr-3">
             {menuItems.map(item => {
-                return <li key={item.route}><a href={item.route} className="p-2 hover:bg-gray-100 mx-1 rounded">{item.label}</a></li>
+                return <li key={item.route}><a href={item.route} className="p-2 hover:text-black hover:bg-gray-100 mx-1 rounded">{item.label}</a></li>
             })}
         </ul>
     );
