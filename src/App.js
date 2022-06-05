@@ -1,10 +1,12 @@
 import React from 'react';
 import LoginForm from './components/LoginForm';
-import logo from './logo.png';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
-    <div className='justify-center' >
+    <div>
+      <Navbar />
       <LoginForm />
   </div>
   );
