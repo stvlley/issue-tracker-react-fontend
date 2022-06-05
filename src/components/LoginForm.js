@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function LoginForm() {
+
+  // TODO > finish submit handler for login form
+
   return (
     <div>
         <section className="h-screen">
@@ -105,13 +108,13 @@ export default function LoginForm() {
           <div className="text-center lg:text-left">
             <button
               type="button"
-              className="p-3 inline-block px-7 py-3 bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              className="p-3 inline-block px-7 py-3 bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             >
               Login
             </button>
             <p className="text-sm font-semibold mt-2 pt-1 mb-0">
               Don't have an account?{' '}
-              <button className="p-1 inline-block bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Register</button>
+              <button className="p-1 px-2 inline-block bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Register</button>
               
             </p>
           </div>
