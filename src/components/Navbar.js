@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const NavBar = ({ menuItems = [{route: "/", label: "Home"}], brand = "ITxPRO" }) => {
+
+const NavBar = ({ menuItems = [{ route: "/", label: "Home" }], brand = "ITxPRO" }) => {
 
     const [toggle, setToggle] = useState(false)
     const [matches, setMatches] = useState(
@@ -42,7 +43,8 @@ const NavBar = ({ menuItems = [{route: "/", label: "Home"}], brand = "ITxPRO" })
             <div className="bg-gray-800 text-white flex justify-between items-center w-full">
                 <div className={`flex justify-between ${!matches && "w-full"}`}>
                     <h1 className=" p-2 h-14 text-2xl font-bold px-7 flex items-center">{brand}</h1>
-                    {!matches && <button onClick={toggleHandler}><i className="pr-4">fx</i></button>}
+                    {!matches && <button onClick={toggleHandler}><i className="pr-4">
+                       menu </i></button>}
                 </div>
                 {matches && desktopMenu}
             </div>
