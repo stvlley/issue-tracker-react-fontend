@@ -11,8 +11,6 @@ export default function Login() {
   const [showProfile, setShowProfile] = useState(false)
   
 
-
-  console.log(password)
   return (
     <div>
         <section className="h-screen">
@@ -111,7 +109,8 @@ export default function Login() {
           <div className="text-center lg:text-left">
             <button
 
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault()
               setShowProfile(true)
             }}
               type="button"
