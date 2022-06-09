@@ -19,7 +19,8 @@ function App() {
     <Navbar />
 
    <LoginContext.Provider value={{ email, setEmail}}>
-   {showProfile ? <Profile /> : <Login setShowProfile={setShowProfile} />}
+     <Profile />
+   {/* {showProfile ? <Profile /> : <Login setShowProfile={setShowProfile} />} */}
    </LoginContext.Provider>
     
     </BrowserRouter>
