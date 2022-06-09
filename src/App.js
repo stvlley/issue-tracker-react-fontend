@@ -1,7 +1,6 @@
 import React from 'react';
 import LoginForm from './components/LoginForm';
-// import Navbar from './components/Navbar';
-import Navvy from './components/Navvy';
+import Navbar from './components/Navbar';
 import Registration from './components/auth/Registration';
 
 import {
@@ -15,7 +14,8 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Navvy />
+  
+    <Navbar />
     <LoginForm />
     </BrowserRouter>
   );

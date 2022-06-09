@@ -1,56 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
+export default function Navbar() {
+  return (
+    <nav className=''>
+         <div className="bg-gray-800 p-2   text-white flex justify-items-end space-x-3 items-center w-full">
+             <Link to='/' className="mx-6 p-2 hover:text-black hover:bg-gray-100 h-14 text-2xl font-bold flex items-center">itPR0</Link>
+             <div className='grow'></div>
+             <Link to='/' className='p-2 hover:text-black hover:bg-gray-100 mx-1 '>Home</Link>
+             <Link to='/' className='p-2 hover:text-black hover:bg-gray-100 mx-1 '>Home</Link>
+             <Link to='/' className='p-2 hover:text-black hover:bg-gray-100 mx-1 '>Home</Link>
+       
 
-const NavBar = ({ menuItems = [{ route: "/", label: "Home" }], brand = "itPR0" }) => {
-
-    const [toggle, setToggle] = useState(false)
-    const [matches, setMatches] = useState(
-        window.matchMedia("(min-width: 600px)").matches
-    )
-
-    useEffect(() => {
-        window
-            .matchMedia("(min-width: 600px)")
-            .addEventListener('change', e => {
-                setMatches(e.matches);
-                setToggle(false);
-            });
-    }, []);
-
-    const toggleHandler = () => {
-        setToggle(!toggle);
-    }
-
-
-    const desktopMenu = (
-        <ul className="flex last:pr-3">
-            {menuItems.map(item => {
-                return <li key={item.route}><a href={item.route} className="p-2 hover:text-black hover:bg-gray-100 mx-1 rounded">{item.label}</a></li>
-            })}
-        </ul>
-    );
-
-    const mobileMenu = (
-        <ul className="flex flex-col text-center bg-gray-700 text-gray-50">
-            {menuItems.map(item => {
-                return <li key={item.route}><a href={item.route} className="block p-2 hover:bg-gray-600">{item.label}</a></li>
-            })}
-        </ul>
-    );
-
-    return (
-        <nav>
-            <div className="bg-gray-800 text-white flex justify-between items-center w-full">
-                <div className={`flex justify-between ${!matches && "w-full"}`}>
-                    <h1 className=" p-2 h-14 text-2xl font-bold px-7 flex items-center">{brand}</h1>
-                    {!matches && <button onClick={toggleHandler}><i className="pr-4">
-                       menu </i></button>}
-                </div>
-                {matches && desktopMenu}
-            </div>
-            {(!matches && toggle) && mobileMenu}
-        </nav>
-    )
+         </div>
+    </nav>
+  )
 }
-
-export default NavBar;

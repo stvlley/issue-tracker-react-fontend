@@ -6,6 +6,7 @@ export default function LoginForm({ handleRegisterClick }) {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [showProfile, setShowProfile] = useState(false)
 
   console.log(email)
   console.log(password)
@@ -106,6 +107,10 @@ export default function LoginForm({ handleRegisterClick }) {
 
           <div className="text-center lg:text-left">
             <button
+
+            onClick={() => {
+              setShowProfile(true)
+            }}
               type="button"
               className="p-3 inline-block px-7 py-3 bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             >
@@ -114,11 +119,13 @@ export default function LoginForm({ handleRegisterClick }) {
             <p className="text-sm font-semibold mt-2 pt-1 mb-0">
               Don't have an account?{' '}
               <button
-               onClick={handleRegisterClick}
+               
                
                className="p-1 px-2 inline-block bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Register</button>
               
             </p>
+
+            {showProfile && <h1>{email}</h1>}
           </div>
         </form>
       </div>
