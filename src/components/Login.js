@@ -1,14 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { LoginContext } from '../contexts/LoginContext'
+import Profile from './Profile'
 
-export default function LoginForm({ handleRegisterClick }) {
+export default function Login() {
 
-  // TODO > finish submit handler for login form
+  const { setEmail } = useContext(LoginContext)
 
-  const [email, setEmail] = useState("")
+  
   const [password, setPassword] = useState("")
   const [showProfile, setShowProfile] = useState(false)
+  
 
-  console.log(email)
+
   console.log(password)
   return (
     <div>
@@ -125,7 +128,7 @@ export default function LoginForm({ handleRegisterClick }) {
               
             </p>
 
-            {showProfile && <h1>{email}</h1>}
+            {showProfile && <Profile/>}
           </div>
         </form>
       </div>
