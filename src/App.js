@@ -4,17 +4,20 @@ import LoginForm from './components/LoginForm';
 import Navvy from './components/Navvy';
 import Registration from './components/auth/Registration';
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
 
 
   return (
-    <div>
-      {/* <Navbar /> */}
-      <Navvy />
-      <LoginForm />
-      
-  </div>
+    <BrowserRouter>
+    <Navvy />
+    <LoginForm />
+    </BrowserRouter>
   );
 }
 
