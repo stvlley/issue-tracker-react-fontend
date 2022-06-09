@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function LoginForm() {
+export default function LoginForm({ handleRegisterClick }) {
 
   // TODO > finish submit handler for login form
 
@@ -113,7 +113,10 @@ export default function LoginForm() {
             </button>
             <p className="text-sm font-semibold mt-2 pt-1 mb-0">
               Don't have an account?{' '}
-              <button className="p-1 px-2 inline-block bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Register</button>
+              <button
+               onClick={handleRegisterClick}
+               
+               className="p-1 px-2 inline-block bg-gray-700 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Register</button>
               
             </p>
           </div>

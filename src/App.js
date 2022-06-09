@@ -6,12 +6,14 @@ import Registration from './components/auth/Registration';
 
 
 function App() {
+
+
   return (
     <div>
       {/* <Navbar /> */}
       <Navvy />
       <LoginForm />
-      <Registration />
+      
   </div>
   );
 }
