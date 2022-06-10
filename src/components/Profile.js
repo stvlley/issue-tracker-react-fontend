@@ -1,25 +1,21 @@
-import React, {useContext, useEffect} from 'react'
-import { LoginContext } from '../contexts/LoginContext'
+import React  from 'react'
 
+import useFetch from '../useFetch'
 
 export default function Profile() {
 
-    const {email, password} = useContext(LoginContext)
-    console.log(password)
+    const {data, loading, error} = useFetch('http://localhost:4000/users')
+   
 
-    useEffect(function() {
-        console.log("Effect ran")
-        fetch("http:localhost:4000/users")
-            .then(res => res.json())
-            .then(data => console.log(data))
-    }, [])
+    if (loading) return <h1>LOADING...</h1>
 
+    if (error) console.log(error)
   return (
     <>
     <h1>Profile</h1>
-    <h2>username: {email}</h2>
-    <h2>password: {password}</h2>
-
+    <h2>name: {data?.name}</h2>
+    <h2>email: {data?.email}</h2>
+    
     </>
   )
 }
